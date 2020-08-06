@@ -4,4 +4,13 @@ from .models import Worker
 
 @admin.register(Worker)
 class WorkAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'first_name',
+        'last_name',
+        'is_available',
+        'primary_phone',
+        'secondary_phone',
+    )
+    list_filter = (
+        'is_available',
+    )
