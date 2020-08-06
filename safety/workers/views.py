@@ -17,8 +17,10 @@ class WorkerListView(View):
 
         worker_list = []
         for worker in workers:
-            d = {
+            d = { #edit ADD all
                 'name': worker.first_name
+                
+                
             }
             worker_list.append(d)
 
