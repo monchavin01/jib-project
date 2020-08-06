@@ -1,5 +1,8 @@
 from django.test import TestCase
 
+
+from .models import Worker
+
 class TestWorker(TestCase):
     def test_worker_should_have_defined_fields(self):
         # Given 
