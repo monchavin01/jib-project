@@ -1,9 +1,9 @@
 import json
 
 from rest_framework.response import Response
-from rest_framework import serializers, viewsets
+from rest_framework import serializers
 from rest_framework.views import APIView
-
+#from rest_framework import viewsets
 
 from .models import Worker
 
@@ -26,6 +26,10 @@ class WorkerListView(APIView):
         return Response(serializer.data)
 
 
-class WorkerModelViewSetView(viewsets.ModelViewSet):
-    queryset = Worker.objects.all()
-    serializer_class = WorkerSerializer
+#class WorkerModelViewSetView(viewsets.ModelViewSet):
+#    queryset = Worker.objects.all()
+ #   serializer_class = WorkerSerializer
+
+ #   def create(self, request):
+ #       print(request.data)
+ #       return Response()
