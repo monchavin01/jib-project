@@ -18,5 +18,9 @@ and open localhost:8000
 python manage.py migrate d
 python manage.py makemigrate "make models worker"
 
+pip install requests
 
+- add requirement.txt
+
+pip freeze > requirement.txt 
 
