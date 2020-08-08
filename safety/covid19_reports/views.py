@@ -5,8 +5,11 @@ import requests
 
 class Covid19ReportView(View):
     def get(self, request):
-        requests.get('https://covid19.th-stat.com/api/open/today')
-        return HttpResponse()
+        r = requests.get('https://covid19.th-stat.com/api/open/today')
+        data = r.json()
+        new_confirmed = data['NewConfirmed']
+
+        return HttpResponse(f'NewConfirmed: {new_confirmed}')
 
 
 # Create your views here.
