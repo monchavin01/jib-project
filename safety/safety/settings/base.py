@@ -46,6 +46,7 @@ THIRD_PARTTY_APPS = [
 LOCAL_APPS = [
     'covid19_reports',
     'workers',
+    'certificate',
 
     
 ]
