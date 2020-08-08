@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('workers/', include('workers.urls')),
     path('covid19-reports/', include('covid19_reports.urls')),
+    path('certificates/', include('certificate.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
