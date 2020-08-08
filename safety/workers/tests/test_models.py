@@ -42,4 +42,4 @@ class TestWorker(TestCase):
         self.assertEqual(worker.secondary_phone, secondary_phone)
         self.assertEqual(worker.address, address)
 
-        os.remove('keng.png')
+        os.remove('media/keng.png')
