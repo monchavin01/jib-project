@@ -6,3 +6,4 @@ class CertificateModelSerializer(ModelSerializer):
 
     class Meta:
         model = Certificate
+        firlds = '__all__'
