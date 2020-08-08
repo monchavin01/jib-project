@@ -8,7 +8,6 @@ class TestCovid19ReportView(TestCase):
     def test_view_should_be_accessible(self, _):
         response = self.client.get('/covid19-reports/')
         self.assertEqual(response.status_code, 200)
-
  # new add
     @patch('covid19_reports.views.requests.get')
     def test_view_should_call_covid19_api(self, mock):
@@ -18,7 +17,6 @@ class TestCovid19ReportView(TestCase):
         )
     @patch('covid19_reports.views.requests.get')
     def test_view_should_render_number_of_confirmed(self, mock):
-       
         r = mock.return_value
         r.json.return_value = {
                 "Confirmed": 3345,
@@ -36,3 +34,4 @@ class TestCovid19ReportView(TestCase):
         }
         response = self.client.get('/covid19-reports/')
         self.assertContains(response, 'NewConfirmed: 50')
+        
