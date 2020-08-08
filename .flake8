@@ -1,0 +1,6 @@
+flake8]
+exclude =
+    **/settings/*,
+    **/__pycache__,
+    **/migrations/*
+
