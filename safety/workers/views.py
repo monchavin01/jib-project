@@ -10,14 +10,7 @@ from .models import Worker
 
 # class-base view
 
-class WorkerSerializer(serializers.Serializer):
-    first_name = serializers.CharField(max_length=30)
-    last_name = serializers.CharField(max_length=40)
-    is_available = serializers.BooleanField()
-    primary_phone = serializers.CharField(max_length=10)
-    secondary_phone = serializers.CharField(max_length=10)
-    address = serializers.CharField()
-
+from .serializers import WorkerSerializer
 
 class WorkerListView(APIView):
     def get(self, request):

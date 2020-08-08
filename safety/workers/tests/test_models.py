@@ -35,9 +35,14 @@ class TestWorker(TestCase):
 
         # Then
         self.assertEqual(worker.first_name, first_name)
+        assert worker.first_name == first_name
+
         self.assertEqual(worker.last_name, last_name)
         self.assertEqual(worker.image_profile.name, image_mock.name)
-        self.assertEqual(worker.is_available, is_available)
+        
+        self.assertTrue(worker.is_available, is_available)
+        assert worker.is_available is True
+
         self.assertEqual(worker.primary_phone, primary_phone)
         self.assertEqual(worker.secondary_phone, secondary_phone)
         self.assertEqual(worker.address, address)
